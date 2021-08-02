@@ -1,0 +1,1735 @@
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+    body{
+        background: url(../img/background74.jpg) repeat 0 0;
+        font-family: 'Lora', serif;
+    }
+    /*обертка на гридах */  /* */
+    .wrap{
+        max-width: 1600px;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        margin: 0 auto;
+        min-width: 320px;
+    }
+    .header-index{
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .footer-index{
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .main__home{
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .header{
+        background: url(../img/background49.png) repeat 0 0px;
+        background-color: rgba(217, 223, 223, 0.651);
+        max-width: 1600px;
+        width: 100%;
+        margin: auto;
+        box-shadow: 0 0 22px rgb(0 0 0 / 60%);
+    }
+    .header__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .wrap_tel{
+        display: flex;
+    }
+    .tel{
+        display: flex;
+        align-items: center;
+    }
+    .tel-job{
+        display: flex;
+        align-items: center;
+    }
+    .tel-number{
+        margin: 10px;
+    }
+    /*  описание состояния при нажатии на телефон*/
+    .link{
+        text-decoration: none;
+        color: #3e5a5a;
+        font-size: large;
+        font-weight: bold;
+    }
+    .link:hover{
+        background-color: rgb(31, 187, 192);
+        color: white;
+    }
+    .link:active{
+        border-top: solid;
+    }
+    .link:focus{
+        background-color: #5f9ea040;
+    }
+    .button{
+        margin: 50px 0;
+    }
+    /* стилизация кнопки*/
+    .button1{
+        color: #232323;
+        background: transparent;
+        border: 1px solid #232323;
+        position: relative;
+        font-size: 13px;
+        letter-spacing: 2px;
+        font-family: 'Montserrat', sans-serif;
+        padding: 15px 20px;
+        transition: .2s ease-in-out;
+        text-decoration: none;
+        margin: 0 20px 0 0;
+    }
+    .button1:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 100%;
+        height: 100%;
+        background: #32D4E2;
+        z-index: -1;
+        transition: .25s ease;
+        transform: translate(0, 0);
+
+    }
+    .button1:hover:before {
+        transform: translate(4px, 4px);
+    }
+    .button1:focus{
+        color: teal;
+    }
+    .button1:active{
+        top: 1px;
+    }
+    /* стилизация заголовка */
+    h2 {
+        font-family: 'Lora', serif;
+        font-size: 20px;
+        letter-spacing: 1px;
+        max-width: 1600px;
+        width: 100%;
+        position: relative;
+        display: inline-block;
+        color: #465457;
+        white-space: normal;
+    }
+    .title__home h2:before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 6px);
+        left: 0;
+        right: 0;
+        height: 12px;
+        background: #A6D8CB;
+        z-index: -1;
+    }
+    .title__home span {
+        background: #efefef;
+        padding: 0 15px;
+        margin-left: 20px;
+        border-radius: 5px;
+    }
+    /* стиль картинки */
+    .picture__home{
+        background: url(../img/1\ \(1\).jpg) no-repeat 0 0;
+        width: 100%;
+        height: 100vh ;
+        position: relative;
+    }
+    /* позиционирование рамки с текстом около картинки */
+    .aside__home{
+        position: absolute;
+        left: 35%;
+        top: 5%;
+        font-size: large;
+        background-color: #a6d8cb62;
+        padding: 2%;
+        font-family: 'Lora', serif;
+        letter-spacing: 1px;
+        margin: 2%;
+    }
+    .aside__home-position{
+        left: 0%;
+        top: 100%;
+        margin: 20px;
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        white-space: nowrap;
+        width: calc(100% - 40px);
+        line-height: 40px;
+        box-shadow: 5px 5px 30px 8px #d2d2d2;
+        color: #484848;
+        text-shadow: 4px 3px 6px #3e5a5a;
+        background-color: #d2d2d25c;
+        font-family: sans-serif;
+        font-style: italic;
+        text-indent: 15%;
+    }
+    .aside__home-position ul li::before{
+        content: "";
+        background: url(../img/icons8-checkmark-48.png) 0 7px no-repeat;
+        display:inline-block;
+        width: 36px;
+        height: 40px;
+    }
+
+    /*заголовок около картинки*/
+    .title2__home{
+        text-align: center;
+        color: #3e5a5a;
+        text-shadow: 2px 2px 3px;
+        display: table;
+        width: auto;
+        margin: 0 auto;
+        padding: 15px;
+        letter-spacing: 2px;
+        border: 2px solid #5f9ea0;
+    }
+    .title2__home::after{
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        border: 2px solid #5f9ea0;
+    }
+    /*стилизация текста на главной странице*/
+    .text-home{
+        font-size: xx-large;
+        line-height: 40px;
+        text-align: justify;
+        margin: 30px;
+        letter-spacing: 2px;
+        /* font-style: italic; */
+        border: double 15px rgb(31 187 192);
+        padding: 10px;
+    }
+
+    /*стилизация меню*/
+    .navigation{
+        background-color: #5f9ea0;
+        color: black;
+        width: 100%;
+        box-shadow: 1px -10px 20px #3e5a5ac7;
+    }
+    .navigation ul{
+        margin: 0;
+        padding: 0;
+    }
+    .navigation .link_menu{
+        text-decoration: none;
+        font-weight: bold;
+        line-height: 14px;
+        color: black;
+        display: block;
+        padding: 18px 28px;
+        background-color: cadetblue;
+        transition: .4s ease-in-out;
+        font-family: 'Exo 2', sans-serif;
+    }
+    .menu > li{
+        display: inline-block;
+        list-style-type: none;
+        position: relative;
+        width: auto;
+    }
+    /* черточки разделяющие меню 1 бэкграунд 2 как бокс-шадау*/
+    .menu > li::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 1px;
+        height: 15px;
+        background: #d2d2d2;
+        top: 16px;
+        box-shadow: 4px -2px 0 #d2d2d2;
+        transform: rotate(30deg);
+    }
+    /* убрала черточки после последнего меню */
+    .menu > li:last-child:after {
+        background: none;
+        box-shadow: none;
+    }
+
+    .menu li a:hover{ 
+        text-shadow: 5px 5px 10px; 
+        color: white;
+    }
+    .menu-footer li a:hover { 
+        background-color: darkcyan;
+        border-radius: 5px 5px; 
+    }
+    
+    .menu li a:focus,
+    .menu-footer li a:focus { 
+        text-decoration: underline;
+    }
+    /* стиль подменю и расположение */
+    .production_submenu {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        min-width: 150px;
+        background: #fafafa;
+        z-index: 5;
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(.8);
+        transition: .4s ease-in-out;
+        list-style-type: none;
+    }
+    .production_submenu li a {
+        margin: 0 10px;
+        border-bottom: 2px solid #efefef;
+        font-size: 16px;
+        color: #484848;
+        font-family: 'Exo 2', sans-serif;
+    }
+    .menu > li:hover .production_submenu {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+    }
+    /* описание преимуществ блок benifits */
+    .title-container h2 {
+        display: table;
+        width: auto;
+        margin: 0 auto;
+        padding: 15px;
+        letter-spacing: 2px;
+        font-size: 30px;
+    }
+    /* создание окна перед заголовком */
+    .title-container h2:before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 3px;
+        z-index: -1;
+        width: 20px;
+        height: 35px;
+        border: 4px solid #a6d8cb; 
+    }
+
+    /* выравнивание и стилизация блоков преимуществ*/
+    .benifits-block{
+        width: calc(33% - 30px);
+        padding: 10px;
+        margin: 15px;
+        text-align: center;
+        line-height: 30px;
+    }
+    .benifits{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .benifits-block5 li{
+        list-style-type: square;
+        text-align: left;
+        margin: 0 0 0 20px;
+    }
+    /* выравнивание и стилизация блоков заказа */
+    .order-block{
+        width: 20%;
+        padding: 10px;
+        margin: 2px;
+        text-align: center;
+        line-height: 30px;
+    }
+    .order{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    /* стилизация формы заказать звонок */
+    .form{
+     background-color: rgba(229, 226, 226, 0.822);
+    }
+
+    .title-form h3{
+        font-size: 40px;
+        line-height: 50px;
+        font-weight: bold;
+        margin: 40px;
+        text-align: center;
+        color: #5f9ea0;;
+        text-shadow: 1px 1px 1px grey;
+    }
+    .flex{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .call-form{
+        flex-basis: calc(20% - 1%);
+        margin: 0.5%;
+    }
+    .form-control{
+        font-size: 14px;
+        padding: 15px;
+        border: 7px double #5f9ea0;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        width: 100%;
+        display: block;
+    }
+    .button2{
+        color: white;
+        padding: 20px 30px;
+        border-radius: 10px;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-image: linear-gradient(to right, #9EEFE1 0%, #3e5a5a 51%, #9EEFE1 100%);
+        background-size: 200% auto;
+        box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+        transition: 0.5s;
+        display: block;
+    }
+    .button2:hover{
+        background-position: right center;
+    }
+    /* стилизация футера  */
+    .footer-wrap{
+        display: flex;
+        justify-content: space-between;
+        background: url(../img/background49.png) repeat 0 0px;
+        background-color: rgba(217, 223, 223, 0.651);
+        max-width: 1600px;
+        width: 100%;
+        margin: auto;
+        box-shadow: 0 0 22px rgb(0 0 0 / 60%);
+        padding: 20px;
+    }
+    .navigation-footer .link_menu{
+        text-decoration: none;
+        color: black;
+        display: block;
+        font-family: 'Exo 2', sans-serif;
+        font-weight: bold;
+        padding: 5px;
+    }
+    .contacts-footer{
+        max-width: calc(25% - 10px);
+    }
+
+    /* стилизация страницы контактов */
+    /* обертка страницы контактов */
+    .wrap-contact{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: auto 1fr auto;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    .header-contact{
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .sidebar-contact{
+        grid-area: 2 / 1 / 3 / 2;
+        padding: 40px 5px;
+    }
+    .content-contact{
+        grid-area: 2 / 2 / 3 / 3;
+    }
+
+    .footer-contact{
+         grid-area: 3 / 1 / 4 / 3;
+    }
+    /* заголовок на странице контактов */
+    .title__contact{
+        text-align: center;
+        color: darkcyan;
+        white-space: normal;
+        margin: 10px;
+        width: calc(100% - 20px);
+        text-shadow: 3px 3px 10px #489c9e;
+    }
+
+    /* стиль блоков с телефонами и информацией */
+    .info-contact{
+        border: double 10px lightseagreen;
+        margin: 5%;
+        text-align: center;
+        background: #e0dddd;
+        padding: 10px;
+        line-height: 26px;
+    }
+    /* карта */
+    .map iframe{
+        width: calc(100% - 40px);
+        margin: 20px;
+    }
+    /* стилизация стриницы материалов */
+    .wrap-material{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 1fr auto;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    .header-material{
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .content-material{
+        grid-area: 2 / 1 / 3 / 2;
+        position: relative;
+
+    }
+    .footer-material{
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    /* главный слоган */
+    .title-material{
+        width: 100%;
+        position: relative;
+        display: inline-block;
+        color: #708286;
+        text-shadow: 2px 3px 5px cadetblue;
+    }
+    .title__wrap-material{
+        display: block;
+        margin: 25px auto 0;
+        letter-spacing: 2px;
+    }
+
+    /* стилизация составляющих хорошего окна */
+    .components-wrap{
+        max-width: 1600px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    /* стилизация блоков хорошего окна*/
+    .component-block{
+        background: #5f9ea08f;
+        padding: 40px;
+        width: calc( 33% - 20px);
+        margin: 10px;
+    }
+    .component-img{
+        background: url(../img/иконки-маткриалы.jpg) 0 0 no-repeat;
+        width: 150px;
+        height: 140px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+    .glass{
+        background-position: -408px -426px;
+    }
+    .furniture{
+         background-position: -417px -228px;
+    }
+    .profil{
+        background-position: -415px -35px;
+    }
+    .making{
+        background-position: -226px -35px;
+    }
+    .edit{
+        background-position: -219px -420px;
+    }
+    .added{
+        background-position: -34px -414px;
+    }
+    .component-text{
+        line-height: 26px;
+    }
+    .title-italic{
+        font-style: italic;
+        text-shadow: 2px 3px 5px cadetblue;
+    }
+    /* скрыли надпись подронее в блоке из чего состоит окно*/
+    .link-material {
+        text-decoration: none;
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        padding-right: 30px;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: white;
+    }
+    /* добавили полосу выезжающую*/
+    .link-material:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        height: 8px;
+        margin: auto;
+        background: #5f9ea0;
+        transform: scaleX(.2);
+        transform-origin: left center;
+        z-index: 0;
+        transition: .6s cubic-bezier(.6, .01, 0, 1);
+    }
+    .link-material span {
+        display: inline-block;
+        position: relative;
+        transform: translateX(-200%);
+        transition: .6s cubic-bezier(.6, .01, 0, 1);
+    }
+    .component-block:hover .link-material span{
+         transform: translateX(0%);
+    }
+    .component-block:hover .link-material::before{
+         transform-origin: right center;
+    }
+    .component-block p{
+         font-family: sans-serif;
+    }
+    /* стилизация описания материалов*/
+    .info-material{
+        font-family: 'Lora';
+        line-height: 35px;
+        max-width: 1600px;
+        margin: 0 20px;
+        padding: 5px;
+        font-size: 25px;
+        text-indent: 3%;
+    }
+    h3{
+        font-size: xx-large;
+        text-shadow: 2px 2px 7px;
+        color: #3e5a5a;
+        margin: 10px auto 20px;
+        text-align: center;
+    }
+    /* преимущества однокамерных окон*/
+    .benifits-material{
+        counter-reset: li;
+    }
+    .benifits-material li {
+        position: relative;
+        margin-bottom: 10px;
+        border: 3px solid #2ba8e0;
+        padding: 15px;
+        border-radius: 4px;
+        background: #fefefeb8;
+        color: #231F20;
+        width: 80%;
+    } 
+    /* добавили цифры вверху */
+    .benifits-material li:before {
+        position: absolute;
+        top: -10px;
+        left: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 17px;
+        font-weight: bold;
+        color: #32d4e2;
+        background: #FEFEFE;
+        border-radius: 50%;
+        counter-increment: li;
+        content: counter(li);
+    }
+    /* обтекание картинки */
+    .img-material{
+        float: right;
+        margin: 0 15px;
+    }
+    .title4{
+        margin: 15px;
+        text-shadow: teal 2px 2px 9px;
+        font-size: x-large;
+        color: teal;
+    }
+    /* стилизация списков базовой фурнитуры  */
+    .basic-furniure {
+        background: #efefef;
+        padding: 10px;
+        counter-reset: li;
+    }
+    .basic-furniure li {
+        position: relative;
+        margin: 0 0 10px 50px;
+        padding: 4px 8px;
+        border-top: 2px solid #5f9ea0;
+    }
+    /*добавление цифр сбоку */
+    .basic-furniure li:before {
+        content: counter(li);
+        counter-increment: li;
+        position: absolute;
+        top: -2px;
+        left: -50px;
+        width: 50px;
+        box-sizing: border-box;
+        padding: 4px;
+        background: #5f9ea0;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+    .info-profil > p{
+         text-indent: 0;
+    }
+    /* стилизация списка изготовления */
+    .making-material {
+        border-left: 10px solid #5f9ea0;
+        font-family: 'Lora';
+    }
+    .making-material li {
+        padding: 10px;
+        font-weight: bold;
+        text-indent: 10px;
+    }
+    .making-material li:nth-child(odd) {
+        background: #9eefe16b;
+    }
+    .making-material li:nth-child(even) {
+         background: white;
+    }
+    /* добавлние иконок спрайтом перед списком */
+    .making-material > li::before{
+        content: "";
+        background: url(../img/depositphotos_79560826-stock-illustration-options-and-service-tools-icon.jpg) no-repeat 0 0;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    .making-material > .icon-cut::before{
+        background-position: -53px -104px;
+    }
+    .making-material > .icon-drill::before{
+        background-position: -53px -153px;
+    }
+    .making-material > .icon-arm::before{
+        background-position: -104px -101px;
+    }
+    .making-material > .icon-weld::before{
+        background-position: -106px -54px;
+    }
+    .making-material > .icon-clear::before{
+        background-position: -4px -4px;
+    }
+    .making-material > .icon-build::before{
+        background-position: -1px -154px;
+    }
+    .making-material > .icon-bag::before{
+        background-position: -151px -154px;
+    }
+    .info-edit{
+        margin: 20px;
+        border: double 6px;
+        border-radius: 30px;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        color: #5f9ea0;
+    }
+    /* стилизация дополнительных компонентов в материалах  */
+    .info-dop{
+        background: url(../img/hirdavat-urunleri-min.png) no-repeat 50% 50%;
+    }
+    .wrap-dop{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .dop-block{
+        width: 35%;
+        background-color: rgba(95, 158, 160, 0.493);
+        margin: 10px;
+        padding: 20px;
+        border-radius: 50px;
+        text-align: center;
+        box-shadow: 0px 6px 8px
+    }
+    .dop-block p{
+        font-family: sans-serif;
+    }
+    .dop-block h4{
+        font-size: larger;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    /* стилизация страницы с фоторабот */
+    .wrap-photo{
+        display: block;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    .fotorama{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-photo{
+         grid-area: 1 / 1 / 2 / 2;
+    }
+    .content-photo{
+        display: block;
+        margin: 0 auto;
+        max-width: 1600px;
+    }
+    .footer-photo{
+        grid-area: 3 / 1 / 4 / 2;
+
+    }
+    /* заголовок на фото работ */
+    .title-photo{
+        font-family: 'Lora', serif;
+        font-size: 45px;
+        letter-spacing: 1px;
+        max-width: 1600px;
+        width: 100%;
+        position: relative;
+        display: inline-block;
+        color: #465457;
+        text-align: center;
+        margin: 20px auto;
+        white-space: normal;
+    }
+    .title-photo::before{
+        content: "";
+        position: absolute;
+        top: calc(50% - 6px);
+        left: 0;
+        right: 0;
+        height: 12px;
+        background: #A6D8CB;
+        z-index: -1;
+    }
+    /* стилизация модального окна заказать звонок */
+    div .modal2{
+        background: url(../img/background70.png);
+    }
+    .title-form2 h3{
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: bold;
+        text-align: center;
+        color: #5f9ea0;;
+        text-shadow: 1px 1px 1px grey;
+    }
+    .flex2{
+        display: flex;
+        flex-direction: column;
+    }
+    .button2-center{
+         margin: 0 auto;
+    }
+    .form-control2{
+        font-size: 14px;
+        padding: 15px;
+        border: 7px double #5f9ea0;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        width: 100%;
+        display: block;
+    }
+    /* стилизация кнопки наверх */
+    .button-up{
+        display: none;	
+        opacity:0.5;
+        position: fixed;
+        right: 20px;
+        bottom: 100px;
+        transition: .3s;
+        background-color: #489c9e;
+        padding: 10px 30px;
+        border: double 4px #838ca1;
+        border-radius: 15px;
+        font-weight: bold;
+        box-shadow:inset #ffffff 0px 5px 8px 0px,#ebebeb 0px 3px 2px;
+        background:linear-gradient(#ffffff, #84a8bd);
+        color:#ffffff;
+    }
+    .button-up:hover{
+        cursor: pointer;
+        opacity: 1;
+        transition: .3s;
+        color: #201c1c;
+    }
+    /* стилизация страницы продукция */
+
+    .wrap-production{
+        display: grid;
+        grid-template-columns: 20% auto;
+        grid-template-rows: auto 1fr auto;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    .header-production{
+        grid-area: 1 / 1 / 2 / 4;
+    }
+    .sidebar-production{
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .content-production{
+        grid-area: 2 / 2 / 3 / 3;
+        margin: 0 20px;
+        min-width: 320px;
+    }
+    .aside-production{
+        grid-area: 2 / 3 / 3 / 4;
+    }
+    .footer-production{
+        grid-area: 3 / 1 / 4 / 4;
+    }
+
+    /* боковая колонка */
+    .menu_production li{
+        background-color: #5f9ea0;
+        color: black;
+        width: 100%;
+        box-shadow: 1px 14px 20px #3e5a5ac7;
+        margin: 10px;
+        padding: 15px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .link_production{
+        margin: 0 10px;
+        font-size: 16px;
+        color: #232323;
+        font-family: 'Exo 2', sans-serif;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+    .link_production:hover{
+        color: white;
+        text-shadow: 0 5px 9px;
+    }
+    .link_production:active{
+        text-shadow: 5px 5px 10px black;
+    }
+    .link_production:focus{
+        text-decoration: underline;
+    }
+    /* из чего складывается цена на двери */
+    .wrap-title__price-door{
+        background: url(../content/фон1.jpg) repeat;
+        background-color: cadetblue;
+        padding: 60px 60px 0;
+        margin-bottom: 30px;
+        color: #666;
+    }
+    .box-title__price-door{
+        display: flex;
+        background-color: rgba(95, 158, 160, 0.849);
+        padding: 10px 30px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+    }
+    /* под текст положила иконку калькулятора */
+    .box-title__price-door::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        top: 15px;
+        bottom: 15px;
+        left: 15px;
+        background: url(../img/icons8-бухгалтерский-учет-100.png) left/auto 100% no-repeat;
+        opacity: 0.4;
+    }
+    .title__price-door{
+        font-size: 26px;
+        line-height: 32px;
+        position: relative;
+        width: calc(50% - 15px);
+        font-weight: bold;
+        z-index: 1;
+    }
+    .title-text__price-door{
+        font-size: 15px;
+        width: calc(50% - 15px);
+        font-weight: 300;
+    }
+    .wrap-text__price-door{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        counter-reset: number;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+    .text-conteiner{
+        counter-increment: number;
+        width: calc(40% - 40px);
+        margin: 0 20px;
+    }
+    .text-title__price-door{
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        color: #5f9ea0;
+        font-weight: bold;
+        margin: 10px 0 20px;
+    }
+    /* добавление цифры перед надписью */
+    .text-title__price-door::before{
+        content: counter(number);
+        color: #fff;
+        font-size: 40px;
+        line-height: 30px;
+        background: rgb(31 187 192);
+        padding: 15px 5px 0;
+        margin-right: 20px;
+    }
+    .text__price-door{
+        font-size: 16px;
+    }
+    .img-door{
+        float: left;
+        margin-right: 20px;
+    }
+    /* стоимость дверей */
+    .wrap-price{
+        display: flex;
+        margin: 10px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        }
+    .block-price{
+        width: calc(25% - 20px);
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    .block-price2{
+        width: calc(25% - 20px);
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    .block-price3{
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    .block-price4{
+        width: calc(50% - 20px);
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    .price-element{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-top: -20px;
+        color: rgb(31 187 192);
+        text-align: center;
+    }
+    .price-element span{
+        font-size: 30px;
+    }
+    .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .price-element2{
+         margin: 0;
+    }
+
+    .wrap-certificate-flex{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    /* описание преимуществ окон  на странице продукция*/
+    .wrap-benefits_window{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .block-benefits_window{
+        width: calc(50% - 5px);
+        padding: 15px 0;
+        position: relative;
+        background: #e8e8e8;
+        margin-bottom: 10px;
+    }
+    .benefits-window_text{
+        width: 60%;
+        padding: 15px 30px;
+
+    }
+    .benefits-window_title{
+        font-weight: bold;
+        font-size: 25px;
+        width: 70%;
+        padding: 15px 30px;
+        color: #fff;
+        background: rgb(31 187 192);
+        position: relative;
+        z-index: 1;
+    }
+    .benefits-window_img{
+        position: absolute;
+        top: 15px;
+        right: 0;
+        bottom: 0;
+        width: 40%;
+    }
+    .benefits-window_img1{
+        background: url(../content/преимущества\ 244-304\ \(7\).jpg) no-repeat;
+    }
+    .benefits-window_img2{
+        background: url(../content/преимущества\ 244-304\ \(8\).jpg) no-repeat;
+    }
+    .benefits-window_img3{
+        background: url(../content/преимущества\ 244-304\ \(2\).jpg) no-repeat;
+        background-position: -70px 0px;
+    }
+    .benefits-window_img4{
+        background: url(../content/преимущества\ 244-304\ \(1\).jpg) no-repeat;
+    }
+    .benefits-window_img5{
+        background: url(../content/преимущества\ 244-304\ \(3\).jpg) no-repeat;
+        background-position: -65px 0px;
+    }
+    .benefits-window_img6{
+        background: url(../content/преимущества\ 244-304\ \(5\).jpg) no-repeat;
+        background-position: -65px 0px;
+    }
+    /* описание блока окон проплекс */
+    .window-proplex{
+        font-weight: bold;
+        margin: 15px;
+        line-height: 25px;
+    }
+    .wrap-proplex{
+        display: flex;
+    }
+    .window-proplex li::before{
+        content: "";
+        background: url(../img/icons8-ок-30.png);
+        width: 30px;
+        height: 30px;    
+        display: inline-block;
+        margin-right: 5px;
+
+    }
+    .wrap-certificate{
+         margin: 10px;
+    }
+    /* стилизация кнопок о ценах и фото */
+    .button-3 {
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 15px;
+        font-size: 16px;
+        color: #3e5a5a;
+        font-weight: bold;
+        margin: 10px;
+    }
+    .button-3 span {
+        position: relative;
+    }
+    .button-3:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35px;
+        height: 100%;
+        background:#a6d8cb;
+        transition: .3s ease-in-out;
+    }
+    .button-3:hover:before {
+        width: 100%;
+    }
+    .button-3:active {
+        text-shadow: 0 3px 5px white;
+    }
+    .button-3:focus {
+        text-decoration: overline;
+    }
+    .wrap_button-3{
+         text-align: center;
+    }
+    /* оформление списка холодного и теплого остекления */
+    .glazing {
+        padding: 20px;
+        margin: 10px auto;
+    }
+    .glazing li {
+        padding: 7px 20px;
+        margin-bottom: 10px;
+        border-left: 10px solid #489c9e;
+        box-shadow: 2px 2px 5px grey;
+        font-size: 20px;
+        letter-spacing: 2px;
+        transition: 0.3s all linear;
+    }
+    .glazing li:nth-child(2){
+        border-color: #8bc63e;
+    }
+    .glazing li:nth-child(3){
+        border-color: #fcba30;}
+    .glazing li:nth-child(4){border-color: #058a85;
+    }
+    .glazing li:nth-child(5){
+        border-color: #e7681a;
+    }
+    .glazing li:nth-child(6){
+        border-color: #35f04e;
+    }
+    .glazing li:hover {
+         border-left: 10px solid transparent;
+    }
+    .glazing li:nth-child(1):hover {
+        border-right: 10px solid #f05d22;
+    }
+    .glazing li:nth-child(2):hover {
+        border-right: 10px solid #f84028;
+    }
+    .glazing li:nth-child(3):hover {
+        border-right: 10px solid #30fc63;
+    }
+    .glazing li:nth-child(4):hover {
+        border-right: 10px solid #1ccfc9;
+    }
+    .glazing li:nth-child(5):hover {
+        border-right: 10px solid #2629e2;
+    }
+    .glazing li:nth-child(6):hover {
+        border-right: 10px solid #cf4eaf;
+    }
+    /* обертка прайса */
+    .wrap-cost{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 1fr auto;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    .header-price{
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .content-price{
+        grid-area: 2 / 1 / 3 / 2;
+        height: 100%;
+    }
+    .footer-price{
+        grid-area: 3 / 1 / 4 / 2;
+
+    }
+    .price-img{
+        display: block;
+        margin: 0 auto;
+    }
+    .tabs-nav__item{
+        background-color: #5f9ea0;
+        color: black;
+        box-shadow: 1px 14px 20px #3e5a5ac7;
+        margin: 10px;
+        padding: 15px;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+    }
+    .tabs-nav__item.is-activ{
+        border: solid 3px black;
+    }
+    .tab{
+        display: none;
+    }
+    .tab.is-activ{
+        display: block;
+    }
+    /* меню бургер */
+    .menu-icon{
+        display: none;
+    }
+
+
+    @media screen and (max-width: 1100px){
+    .aside__home{
+        position: absolute;
+        left: 20%;
+        top: 5%;
+        background-color: #a6d8cba6;
+    }
+    .aside__home-position{
+        left: 0%;
+        top: 100%;
+        margin: 2%;
+        background-color: #d2d2d2c4;
+    }
+    .component-block{
+        width: calc(50% - 20px);
+    }
+    .dop-block {
+        width: 45%;
+        background-color: rgb(95 158 160 / 80%);
+    }
+    .block-benefits_window {
+        width: calc(70% - 10px);
+    }
+    .block-price2 {
+         width: calc(40% - 20px);
+    }
+    .block-price4{
+        width: calc(60% - 20px);
+    }
+    .navigation .link_menu{
+        font-size: 16px;
+        padding: 14px 20px;
+    }
+    }
+    @media screen and (max-width: 870px){
+    .aside__home{
+        position: absolute;
+        left: 10%;
+        top: 1%;
+    }
+    .aside__home-position{
+        left: 0%;
+        top: 100%;
+        margin: 10px;
+        text-indent: 0;
+    }
+
+    .header__content{
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+    }
+    .logo{
+        display: block;
+    }
+    .button{
+        margin: 50px 0;
+    }
+    .button2{
+        margin: 0 auto 15px;
+    }
+    .benifits-block {
+        width: calc(50% - 30px)
+    }
+    .order{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .order-block{
+        width: 40%;
+    }
+    .text-home{
+        font-size: x-large;
+        text-align: center;
+    }
+    .title-container h2{
+        font-size: 25px;
+    }
+    .call-form{
+        flex-basis: calc(30% - 1%);
+    }
+    .footer-wrap{
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .logo{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .wrap-contact{
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+    .sidebar-contact{
+        grid-area: 3 / 1 / 4 / 3;
+        padding: 0;
+    }
+    .content-contact{
+         grid-area: 2 / 1 / 3 / 3;
+    }
+
+    .footer-contact{
+        grid-area: 4 / 1 / 5 / 3;
+    }
+    .flex-contact{
+        align-items: center;
+    }
+    .info-contact{
+        width: 40%;
+        margin: 10px;
+    }
+
+    .header-photo{
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .content-photo{
+        grid-area: 2 / 1 / 3 / 2;
+        margin: 0 auto;
+        max-width: 1600px;
+    }
+    .footer-photo{
+         grid-area: 3 / 1 / 4 / 2;
+    }
+    .title-photo{
+        font-family: 'Lora', serif;
+        font-size: 45px;
+        letter-spacing: 1px;
+        max-width: 1600px;
+        width: 100%;
+        position: relative;
+        display: inline-block;
+        color: #465457;
+        text-align: center;
+        margin: 20px auto;
+        white-space: normal;
+
+    }
+    .title-photo::before{
+        content: "";
+        position: absolute;
+        top: calc(50% - 6px);
+        left: 0;
+        right: 0;
+        height: 12px;
+        background: #A6D8CB;
+        z-index: -1;
+    }
+    .title-photo{
+        font-size: 30px;
+    }
+    .wrap-production{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto 1fr auto auto;
+    }
+    .sidebar-production{
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .aside-production{
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    .content-production {
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    .footer-production{
+        grid-area: 5 / 1 / 6 / 2;
+    }
+    .wrap-certificate{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .wrap-certificate p{
+        width: calc(25% - 10px);
+    }
+    .menu_production{
+        margin: 30px 5px;
+    }
+    .menu_production li{
+        display: inline;
+        margin: 7px;
+        padding: 10px;
+        }
+    .block-benefits_window {
+         width: calc(80% - 10px);
+    }
+    /* бургер меню */
+    .menu-icon{
+        display: block;
+        position: relative;
+        left: 10px;
+        top: 10px;
+        width: 40px;
+        height: 50px;
+        cursor: pointer;
+    } 
+    .menu-icon span, 
+    .menu-icon span:before, 
+    .menu-icon span:after{
+        width: 100%;
+        position: absolute;
+        height: 7px;
+        background: #04615d;
+        display: block;
+        transition: .3s;
+        border-radius: 5px;
+    }
+    .menu-icon span:before{
+        content: "";
+        top: -12px;
+        transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu-icon span{
+        top: 15px;
+    }
+    .menu-icon span:after{
+        content: "";
+        bottom: -12px;
+        transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu-icon span.active:before{
+        content: "";
+        top: 0px;
+        transform: rotate(45deg);
+        transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .menu-icon span.active:after{
+        content: "";
+        bottom: 0;
+        transform: rotate(-45deg);
+        transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    .menu-icon span.active{
+        background: rgba(255, 255, 255, 0); 
+    }
+    .nav__menu{
+        width: 300px;
+        height: auto;
+        background: #058a85;
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        position: absolute;
+        left: -320px;
+        transition: left 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        z-index: 3;
+        overflow: auto;
+    }
+    .nav__menu.animate{
+        left: 0;
+    }
+
+    body._lock{
+        overflow: hidden;
+    } 
+    .menu > li{
+        display: block;
+        margin: 5px;
+    }
+    .menu > li::after{
+         display: none;
+    }
+    .block-price3{
+        width: calc(60% - 20px);
+    }
+    }
+    @media screen and (max-width: 700px){
+    .aside__home{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .aside__home-position{
+        left: 0%;
+        top: 100%;
+        margin: 10px;
+        width: calc(100% - 20px);
+        white-space: normal;
+        letter-spacing: 1px;
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .wrap_tel{
+        flex-direction: column;
+        align-items: center;
+    }
+    .button{
+        margin: 29px 3px 30px 37px;
+    }
+    .title-container h2{
+        font-size: medium;
+    }
+    .text-home{
+        font-size: x-large;
+        text-align: center;
+        line-height: 40px;
+    }
+    .title-container h2{
+        font-size: 17px;
+    }
+    .title-container h2:before{
+        height: 25px;
+    }
+    .flex{
+        flex-direction: column;
+    }
+    .form-control{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .title-form h3{
+        font-size: 30px;
+        line-height: 35px;
+        margin: 25px;
+    }
+    .navigation-footer{
+        width: 100%;
+        text-align: center;
+    }
+    .info-contact{
+         width: 60%;
+    }
+    .component-block{
+        width: calc(80% - 20px);
+    }
+    .title-material{
+        font-size: 20px;
+        margin: 0 0 0 20px;
+    }
+    h3{
+        font-size: x-large;
+    }
+    .info-material{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .dop-block {
+        width: 70%;
+        margin: 10px auto;
+    }
+    .text-conteiner {
+        width: 100%;
+    }
+    .price-img{
+        width: 100%;
+    }
+    .price-element{
+        font-size: 15px;
+        margin: 3px;
+    }
+    .price-element span {
+        font-size: 20px;
+    }
+    .price-img1{
+        width: 100%;
+    }
+    .block-price3 {
+        width: calc(50% - 20px);
+    }
+    }
+    @media screen and (max-width: 530px){
+    .aside__home-position{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .title__home h2{
+        font-size: 90%;
+    }
+    .title-container h2{
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .benifits-block {
+        width: calc(95% - 30px);
+        margin: auto;
+    }
+    .order{
+        margin: 30px;
+    }
+    .order-block{
+        width: calc( 95% - 10px);
+    }
+    .text-home{
+        display: none;
+        font-size: larger;
+        line-height: 35px
+    }
+    .tel-footer{
+        width: 100%;
+        text-align: center;
+
+    }
+    .contacts-footer{
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    .navigation-footer{
+        display: none;
+    }
+    .info-contact{
+        width: 80%;
+    }
+    .component-block{
+        width: calc(100% - 20px);
+    }
+    .title-italic{
+        text-align: left;
+        display: inline-block;
+        font-size: 17px;
+    }
+    .img-material{
+        float: none;
+        text-align: center;
+    }
+    .info-material{
+        font-size: 16px;
+    }
+    h3{
+        font-size: large;
+        text-align: center;
+    }
+    .dop-block {
+        width: 95%;
+    }
+    .title-form2 h3{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .wrap-certificate p{
+         width: calc(30% - 10px);
+    }
+    .menu_production li {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+    }
+    .window-img{
+        display: none;
+    }
+    .block-benefits_window {
+        width: calc(100% - 10px);
+    }
+    .benefits-window_title{
+        width: 90%;
+    }
+    .title-text__price-door{
+        display: none;
+    }
+    .title-photo{
+        font-size: 20px;
+    }
+    .header__content {
+        justify-content: left;
+        height: auto;
+    }
+    .logo-header {
+        text-align: left;
+    }
+    .title2__home{
+        font-size: 20px;
+    }
+    .title2__home::after{
+        display: none;
+    }
+    .content-production {
+        margin: 0;
+    }
+    }
